@@ -83,7 +83,7 @@ Handles user-to-user communication.
 
 ### 2. **Visual Notation**
 
-![Entity-Relationship Diagram](ERD/airbnb_erd.png)
+![Entity-Relationship Diagram](/airbnb_erd.png)
  
 ## Design Decisions
 
