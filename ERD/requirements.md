@@ -68,8 +68,6 @@ Handles user-to-user communication.
   - `message_body` (TEXT)), NOT NULL
   - `sent_at` (TIMESTAMP), DEFAULT CURRENT_TIMESTAMP
 
----
-
 ## Relationships
 
 ### 1. **Core Relationships**
@@ -85,8 +83,8 @@ Handles user-to-user communication.
 
 ### 2. **Visual Notation**
 
-![Entity-Relationship Diagram](./ERD/airbnb_erd.png)
-
+![Entity-Relationship Diagram](ERD/airbnb_erd.png)
+ 
 ## Design Decisions
 
 ## Design Decisions
@@ -95,7 +93,6 @@ Handles user-to-user communication.
 - **UUIDs** instead of sequential IDs:
   - Prevents ID guessing attacks
   - Works in distributed systems
-  - Example: `123e4567-e89b-12d3-a456-426614174000`
 
 ### 2. **Constraints**
 - **ENUM Validation**:
@@ -117,8 +114,6 @@ Handles user-to-user communication.
 | `properties.host_id` | Quick access to host's listings          |
 | `bookings.status`    | Efficient filtering of active reservations |
 
----
-
 ## Constraints
 1. **Referential Integrity**
    - All foreign keys use `ON DELETE CASCADE`
@@ -131,8 +126,6 @@ Handles user-to-user communication.
 3. **Uniqueness**
    - `email` enforced as UNIQUE in users
    - `booking_id` enforced as UNIQUE in payments
-
----
 
 ## ER Diagram Instructions
 1. **Tool**: Draw.io/Lucidchart
