@@ -17,7 +17,7 @@ INNER JOIN users u ON b.user_id = u.users_id;
 
 SELECT 
     p.property_id,
-    p.property_name,
+    p.name,
     r.review_id,
     r.comment, 
     r.rating,
