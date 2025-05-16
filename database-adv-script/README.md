@@ -1,5 +1,6 @@
 # Joins Documentation
 
+### Task 0: Complex SQL Joins
 #### Objective
 Practice different types of SQL joins to combine data across the users, bookings, reviews, and properties tables.
 
@@ -17,4 +18,18 @@ Practice different types of SQL joins to combine data across the users, bookings
 - Combines both matched and unmatched rows between users and bookings.
 - Helps spot users who have not made bookings and bookings that may not be linked to valid users.
 - Combines `LEFT` and `RIGHT JOIN` via `UNION`.
+
+### Task 1: Subqueries
+
+#### Objective
+Practice using subqueries, including both non-correlated and correlated forms.
+
+#### Non-Correlated Subquery
+- Identifies properties whose average review rating is greater than 4.0.
+- Uses GROUP BY and HAVING to compute the average.
+
+#### Correlated Subquery
+- Finds users who have made more than 3 bookings.
+- The subquery is executed for each user row in the outer query.
+
 

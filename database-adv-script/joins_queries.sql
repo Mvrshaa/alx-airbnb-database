@@ -19,7 +19,9 @@ SELECT
     p.property_id,
     p.property_name,
     r.review_id,
-    r.rating
+    r.comment, 
+    r.rating,
+    r.created_at
 FROM 
     properties p
 LEFT JOIN reviews r ON p.property_id = r.property_id;
