@@ -22,7 +22,7 @@ SELECT
   r.review_rating
 FROM
   properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+LEFT JOIN review r ON p.property_id = r.property_id;
 
 -- FULL OUTER JOIN: Include all users and all bookings, even unmatched/not linked
 
