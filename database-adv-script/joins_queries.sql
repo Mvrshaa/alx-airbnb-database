@@ -2,13 +2,13 @@
 -- Retrieve all bookings with their corresponding users
 
 SELECT
-  b.booking_id,
-  b.start_date,
-  b.end_date,
-  u.users_id,
-  u.user_name
+    b.booking_id,
+    b.start_date,
+    b.end_date,
+    u.users_id,
+    u.user_name
 FROM
-  bookings b
+    bookings b
 INNER JOIN users u ON b.user_id = u.users_id;
 
 
@@ -16,16 +16,19 @@ INNER JOIN users u ON b.user_id = u.users_id;
 -- Retrieve all properties and their reviews (if any), including properties with no reviews
 
 SELECT
-  p.property_id,
-  p.name,
-  r.review_id,
-  r.rating, 
-  r.comment,
-  r.user_id,
-  r.created_at
+    p.property_id,
+    p.name,
+    r.review_id,
+    r.rating,
+    r.comment,
+    r.user_id,
+    r.created_at
 FROM 
-  properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+    properties p
+LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY
+    p.property_id ASC,
+    r.created_at DESC;
 
 -- FULL OUTER JOIN: Include all users and all bookings, even unmatched/not linked
 
